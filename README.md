@@ -20,7 +20,7 @@ const halloween: Theme = {
   id: 'halloween',
   name: 'Halloween',
   spaces: [
-    { id: 'pumpkin', label: 'Pumpkin', color: '#ff7518', icon: '🎃' },
+    { id: 'jack-o-lantern', label: "Jack-o'-Lantern", color: '#ff7518', icon: '🎃' },
     { id: 'ghost', label: 'Ghost', color: '#0a0a0a', icon: '👻', stroke: '#f2f2f2' },
     // ...
   ],

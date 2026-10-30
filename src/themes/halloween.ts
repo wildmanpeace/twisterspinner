@@ -4,10 +4,10 @@ const halloween: Theme = {
   id: 'halloween',
   name: 'Halloween',
   spaces: [
-    { id: 'pumpkin', label: 'Pumpkin', color: '#ff7518', icon: '🎃' },
+    { id: 'jack-o-lantern', label: "Jack-o'-Lantern", color: '#ff7518', icon: '🎃' },
     // Outlined so it stays visible against the dark background.
     { id: 'ghost', label: 'Ghost', color: '#0a0a0a', icon: '👻', stroke: '#f2f2f2' },
-    { id: 'witch', label: 'Witch', color: '#7b2fbe', icon: '🧙' },
+    { id: 'witchcraft', label: 'Witchcraft', color: '#7b2fbe', icon: '🧙' },
     { id: 'bat', label: 'Bat', color: '#ffd400', icon: '🦇' },
   ],
   look: {
