@@ -39,6 +39,12 @@ Difficulty is set by the limb set in `src/limbs.ts`:
 
 Any theme can be played at any difficulty.
 
+## Offline use
+
+The app is a PWA: after the first visit, a service worker keeps a copy on the device so it opens and spins with no connection. Use **Add to Home Screen** (Safari share menu, or Chrome's menu) to install it with its own icon.
+
+After a new version is deployed, the device picks it up the next time the app is opened online, and uses it from the following launch.
+
 ## Deploying
 
 `.github/workflows/deploy.yml` builds and publishes the site to GitHub Pages on every push to `main`. One-time setup: in the repo's **Settings → Pages**, set **Source** to **GitHub Actions**.
