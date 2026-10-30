@@ -1,0 +1,137 @@
+:root {
+  --bg: #f4f4f4;
+  --fg: #1a1a1a;
+  --accent: #e53935;
+  --font: system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  transition: background 0.3s;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 16px;
+  min-height: 100dvh;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.controls label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.controls select {
+  font: inherit;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid var(--accent);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.wheel-wrap {
+  position: relative;
+  width: min(100%, 60dvh);
+  aspect-ratio: 1;
+  margin-top: 14px;
+}
+
+.rotor {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.rotor svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+/* Fixed arrow at 12 o'clock pointing down into the wheel. */
+.pointer {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 28px solid var(--fg);
+  z-index: 1;
+  filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.4));
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 64px;
+  font-size: clamp(1.4rem, 6vw, 2rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+.swatch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid var(--fg);
+  font-size: 1.8rem;
+}
+
+.spin-button {
+  font: inherit;
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 14px 48px;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgb(0 0 0 / 0.3);
+}
+
+.spin-button:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgb(0 0 0 / 0.3);
+}
+
+.spin-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

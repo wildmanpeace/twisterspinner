@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111111" />
+    <title>Twister Spinner</title>
+  </head>
+  <body>
+    <main class="app">
+      <header class="controls">
+        <label>
+          Theme
+          <select id="theme-select"></select>
+        </label>
+        <label>
+          Difficulty
+          <select id="limbs-select"></select>
+        </label>
+      </header>
+
+      <div class="wheel-wrap">
+        <div class="pointer" aria-hidden="true"></div>
+        <div id="rotor" class="rotor"></div>
+      </div>
+
+      <div id="result" class="result" aria-live="polite"></div>
+
+      <button id="spin" class="spin-button" type="button">Spin!</button>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
